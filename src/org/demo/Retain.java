@@ -1,0 +1,67 @@
+package org.demo;
+import java.util.*;
+public class Retain {
+	public static void main(String[] args) {	
+Set<Integer>s=new HashSet();
+Set<Integer>s1=new HashSet();
+Set<Integer>s2=new LinkedHashSet();
+Set<Integer>s3=new LinkedHashSet();
+Set<Integer>s4=new TreeSet();
+Set<Integer>s5=new TreeSet();
+s.add(10);
+s.add(20);
+s.add(30);
+s.add(90);
+s.add(10);
+s.add(10);
+s.add(10);
+s.add(40);
+s.add(50);
+s1.add(30);
+s1.add(40);
+s1.add(50);
+s1.add(60);
+s1.add(80);
+s.retainAll(s1);
+System.out.println(s);
+s2.add(10);
+s2.add(20);
+s2.add(20);
+s2.add(30);
+s2.add(90);
+s2.add(10);
+s2.add(10);
+s2.add(40);
+s2.add(50);
+s3.add(10);
+s3.add(20);
+s3.add(60);
+s3.add(60);
+s3.add(50);
+s3.add(40);
+s3.add(70);
+s3.add(80);
+s3.add(90);
+s2.retainAll(s3);
+System.out.println(s2);
+s4.add(10);
+s4.add(20);
+s4.add(30);
+s4.add(40);
+s4.add(50);
+s4.add(60);
+s4.add(70);
+s4.add(80);
+s5.add(100);
+s5.add(200);
+s5.add(300);
+s5.add(400);
+s5.add(500);
+s5.add(600);
+s5.add(700);
+s5.add(8000);
+s4.retainAll(s5);
+System.out.println(s4);
+
+
+}}
